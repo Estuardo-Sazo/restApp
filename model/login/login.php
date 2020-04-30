@@ -23,7 +23,7 @@
         <div class="card card-signin my-5">
             <div class="card-body">
                 <h5 class="card-title text-center">Inicio de Sesión</h5>
-                <form class="form-signin">
+                <form class="form-signin" id="frmLogin">
                 <div class="form-label-group">
                     <input type="text" id="txtUser" class="form-control" placeholder="Ingrese tu usuario" required autofocus>
                     <label for="txtUser">Ingrese tu usuario</label>
@@ -45,6 +45,7 @@
         </div>
         <div class="col-md-6">
             <h1 align="center" class="text-white">Bienvenido a RestAPP</h1>
+            <h1 align="center" class="text-white" id="Nombre"></h1>
         </div>
     </div>
     </div>
@@ -52,5 +53,6 @@
     <!-- Librerias script que se utilizaran -->
     <script src="../../include/js/jquery3.5.min.js"></script>
     <script src="../../include/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
