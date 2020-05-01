@@ -10,8 +10,14 @@ $(document).ready(function (){
         $.post('php/controlUser.php',datos,function(response){
             let Datos = JSON.parse(response);
             Datos.forEach(d => {
-                $('#Nombre').html(d.usu_nombre+' '+d.usu_apellido)
+                $('#txtUser').val('');
+                $('#txtPass').val('');
+                $('#Nombre').html(d.usu_nombre+' '+d.usu_apellido);
+                $('#load').html(`<div class="spinner-grow text-light" role="status">
+                <span class="sr-only">Loading...</span>
+                </div>`);
             });
+            Inicio();
             
             console.log(Datos);
         });
@@ -19,5 +25,12 @@ $(document).ready(function (){
         
         e.preventDefault();
     });
+
+    function Inicio(){
+        setInterval(() => {
+            var url = "../Inicio/";    
+          $(location).attr('href',url)
+        }, 3000);
+    }
 
 });

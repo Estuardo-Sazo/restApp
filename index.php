@@ -14,6 +14,10 @@
                 justify-content: center;
                 min-height: 100vh;
                 }
+       body {
+          background: #007bff;
+          background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
                
     </style>
 </head>
@@ -22,7 +26,7 @@
 
 <div class="container">
   <div class="abs-center">
-    <h1 class=" animated pulse  delay-2s">RestAPP</h1>
+    <h1 class=" animated pulse  delay-2s text-white   ">RestAPP</h1>
   </div>
 </div>
     
