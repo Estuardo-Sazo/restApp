@@ -8,6 +8,7 @@
     <title>Incio</title>
     <link rel="stylesheet" href="../../include/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../include/css/estilosGLobal.css">
+    <link rel="stylesheet" href="../../include/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -29,6 +30,7 @@
             
         </div>
         </div>
+       
         <!-- Contenido de la pagina -->
         <div id="page-content-wrapper">
             <nav class="navbar  navbar-expand-lg navbar-light bg-light ">
@@ -44,21 +46,68 @@
                     
                 </div>
             </nav>
-            <div class="container">
-                <h1>No hay datos ingresados</h1>
+            <!-- CONTAINER -->
+            <div class="container pt-2">
+                     
+                    <div class="row justify-content-center" >
+                      <div class="col-md-3">
+                            <div class="card card-signin my-3">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-center">Agregar Mesa</h5>
+                                    <form class="form-signin" id="frmMesa">
+                                        <input type="hidden"  id="Area" name="Area" value="<?=$_GET['a'] ?>">
+                                        <input type="hidden"  id="Rest" name="Rest" value="<?=$_GET['r'] ?>">
+                                    <div class="form-group ">
+                                        <label for="txtUser">Nombre de mesa:</label>
+                                        <input type="text" id="txtMesa" class="form-control"  required autofocus>
+                                        
+                                    </div>
+                                    <button type="submit" class="btn btn1 btn-sm btn-primary btn-block text-uppercase" >Agregar Mesa</button>
+                                    
+                                    </form>
+                                    </div>
+                            </div>
+                                
+                        </div> 
+
+                        <div class="col-md-9">
+                            <div class="card card-signin my-3">
+                                <div class="card-body">
+                                <h5 class="card-title text-center">Lista de Mesas</h5>
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">Codigo</th>
+                                            <th scope="col">Nombre mesa</th>
+                                            <th scope="col">Opciones</th>
+                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody id="Cuerpo" >
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
             </div>
-
-
-
+              <!-- CONTAINER -->
 
         </div>
 </div>  
     
 
-
     <!-- Librerias script que se utilizaran -->
     <script src="../../include/js/jquery3.5.min.js"></script>
     <script src="../../include/js/bootstrap.min.js"></script>
+    <script src="../../include/js/all.min.js"></script>
+    <script src="js/mainMesas.js"></script>
     <script>
         $("#wrapper").toggleClass("toggled");
     $("#menu-toggle").click(function(e) {

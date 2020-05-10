@@ -1,3 +1,14 @@
+<?php
+       session_start();
+
+       if(isset($_SESSION['User'])){
+        $json[]= $_SESSION['User'];
+        //$json_string =json_encode($json);
+       }
+       
+       
+    ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,7 +40,7 @@
     <h1 class=" animated pulse  delay-2s text-white   ">RestAPP</h1>
   </div>
 </div>
-    
+<input type="hidden"  id="idR" name="idR" value="<?=$json[0]['Id_rest'] ?>">
 
     <!-- Librerias script que se utilizaran -->
     <script src="include/js/jquery3.5.min.js"></script>
@@ -37,7 +48,13 @@
     <script>
      $(document).ready(function() {
         setInterval(() => {
-          var url = "model/login/login.php";    
+          var url = "";    
+
+          if($('#idR').val()>0){
+            url = "model/Inicio";  
+          }else{
+            url = "model/login/login.php";  
+          }
           $(location).attr('href',url)
         }, 3000);
       });

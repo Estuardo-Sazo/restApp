@@ -43,7 +43,7 @@ $(document).ready(function (){
                     Datos.forEach(d => {
                         template+=`
                         <div class="col-lg-3 col-md-4">
-                            <div class="card card-signin my-3">
+                            <div class="card card-signin my-3 ">
                                     <div class="card-body">
                                     <h5 class="card-title text-center">${d.are_nombre} </h5>
                                     <a href="Mesas.php?r=${d.rest_id}&a=${d.are_id}&name=${d.are_nombre}" class="btn btn1 btn-sm btn-primary btn-block text-uppercase" >Ver Mesas</a>

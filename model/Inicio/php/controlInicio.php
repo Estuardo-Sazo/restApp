@@ -1,6 +1,6 @@
 <?php
 session_start();
-    date_default_timezone_set('America/Guatemala');
+date_default_timezone_set('America/Guatemala');
     $fecha=date('Y-m-d');
 
     //Creamos variables para almacenar los datos 
@@ -10,8 +10,8 @@ session_start();
     if(!empty($_POST['Valor']))// Evalumos el valor en POST que si exista para poder continuar
     {
         $valor=$_POST['Valor'];
-        require 'daoAreas.php';//Elazamos nuestro controlador
-        $ob=new DaoAreas();
+        require 'daoInicio.php';//Elazamos nuestro controlador
+        $ob=new DaoInicio();
 
         if($valor=="Areas")/// Evaluamos el dato que trae la variable $Valor 
         {
@@ -24,21 +24,7 @@ session_start();
             $json_string =json_encode($json);//Covertimos los datos obtenidos en un JSON
             
         }
-
-        /// Funcion para poser resgistrar un Area
-        if($valor=="Add")
-        {
-            /// Agregamos las demas variables que vien
-            $idR=$_POST['idR']; 
-            $nombre=$_POST['Nombre']  ;              
-            $r1=$ob->addArea($nombre,$idR);/// Llamamos  la funcion encargada
-            while($row=mysqli_fetch_array($r1)){
-                $json[]=$row;             
-            }            
-            $json_string =json_encode($json);//Covertimos los datos obtenidos en un JSON
-            
-        }
-
+        
         /// Evaluamos el dato que trae la variable $Valor
         if($valor=="Mesas") 
         {
@@ -50,25 +36,9 @@ session_start();
                 $json[]=$row;             
             }            
             $json_string =json_encode($json);//Covertimos los datos obtenidos en un JSON
-            
-        }
+        }    
+    }
 
-        /// Funcion para poser resgistrar una mesa en su area
-        if($valor=="AddMesa")
-        {
-            /// Agregamos las demas variables que vien
-            $idR=$_POST['idR']; 
-            $idA=$_POST['idA'];
-            $nombre=$_POST['Nombre'];              
-            $r1=$ob->addMesa($nombre,$idR,$idA);/// Llamamos  la funcion encargada
-            if($row=mysqli_fetch_array($r1)){
-                $json[]=$row;             
-            }            
-            $json_string =json_encode($json);//Covertimos los datos obtenidos en un JSON
-            
-        }
-        
-        
-    } 
     echo $json_string;  //Respondemos los datos obtenidos 
+
 ?>

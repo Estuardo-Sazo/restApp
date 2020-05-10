@@ -64,6 +64,7 @@
                                     </div>
                                     <form action="" id="frmArea">
                                     <div class="modal-body p-3">
+                                        
                                         <div class="form-group">
                                             <label for="txtNombre">Nombre del Area</label>
                                             <input type="text" class="form-control" id="txtNombre" placeholder="Area" required>
