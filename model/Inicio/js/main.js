@@ -48,6 +48,9 @@ $(document).ready(function (){
                     });
                     $('#Areas').html(template)
                     $('#Mesas').html(template1)
+                }else{
+                    template='<h2 class=" text-danger">No tienes Ares o mesas registradas, ingresa en el menu y registra nuevos datos.</h2>';
+                    $('#Areas').html(template)
                 }
            
         });
@@ -80,7 +83,7 @@ $(document).ready(function (){
                     btn='<a href="../Facturas/?idf='+id+'" class="btn btn1 btn-sm btn-primary btn-block text-uppercase">Ver Factura</a>';
                 }else{
                     estado='';
-                    btn='<a href="../Facturas/reservar.php?idM='+d.mesa_id+'" class="btn btn1 btn-sm btn-info btn-block text-uppercase">Usar Mesa</a>';
+                    btn='<a href="../Facturas/php/reservar.php?idM='+d.mesa_id+'" class="btn btn1 btn-sm btn-info btn-block text-uppercase">Usar Mesa</a>';
                 }
                 template2+=`
                 <div class="col-lg-3 col-md-4">
