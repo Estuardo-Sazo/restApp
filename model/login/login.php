@@ -45,6 +45,7 @@
         </div>
         <div class="col-md-6">
             <h1 align="center" class="text-white">Bienvenido a RestAPP</h1>
+            <div id="alert1"></div>
             <h1 align="center" class="text-white" id="Nombre"></h1>
             <h2 align="center" id="load">  
                 
