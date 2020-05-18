@@ -50,6 +50,8 @@ session_start();
             
         }
 
+        
+
         if($valor=="Eliminar")/// Evaluamos el dato que trae la variable $Valor 
         {
             /// Agregamos las demas variables que vien
