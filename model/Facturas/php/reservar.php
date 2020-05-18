@@ -24,10 +24,9 @@ $r2=$ob->EstadoMesa($idM);
         $r1=$ob->BuscarUltF($idR);
         $a1=array();
         if($row=mysqli_fetch_array($r1)){
-            $idNew=$row['fac_id'];
-            
-            
+            $idNew=$row['fac_id'];         
         }    
+
         if ($idNew==0) {
             $idNew=1001;
         }else{
