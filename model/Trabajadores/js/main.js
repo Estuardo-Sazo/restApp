@@ -71,7 +71,7 @@ $(document).ready(function (){
                         <td>Q${d.trab_pago}</td>
                         <td>${d.tb_trabajo}</td>
                         <td><button class=" Eliminar btn  btn-sm btn-danger  " >Eliminar </button>
-                        <button class="btn  btn-sm btn-info  " >Actualizar </button></td>
+                        <a class="btn  btn-sm btn-info  " href="php/Actualizar.php?idT=${d.trab_id}" >Actualizar </a></td>
                         </tr>
                         
                           
@@ -80,7 +80,7 @@ $(document).ready(function (){
                 $('#Trab').html(template)
             }else{
                 
-                $('#Trab').html('<h1  class="text-white">No hay registros, porfavor agregue uno nuevo.</h1>');
+                $('#Trab').html('<h3  class="text-danger">No hay registros, porfavor agregue uno nuevo.</h3>');
             }
             
             
